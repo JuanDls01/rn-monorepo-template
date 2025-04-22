@@ -1,0 +1,16 @@
+import { Text } from 'react-native';
+import { render } from '@testing-library/react-native';
+import {{ pascalCase name }} from "./{{ kebabCase name }}";
+
+describe('{{ pascalCase name }}', () => {
+  it('renders correctly with children', () => {
+    const { getByText } = render(
+      <{{ pascalCase name }}>
+        <Text>Child content</Text>
+      </{{ pascalCase name }}>
+    );
+
+    expect(getByText('{{ pascalCase name }} Component')).toBeTruthy();
+    expect(getByText('Child content')).toBeTruthy();
+  });
+});
